@@ -3,7 +3,7 @@ import React from "react";
 
 import Balance from "./Balance";
 
-describe("App component", () => {
+describe("Balance component", () => {
   beforeAll(() => {
     render(<Balance />);
   });
