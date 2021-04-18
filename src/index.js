@@ -1,9 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import "./index.css";
 
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+import App from "./components/App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector("#root")
+);
 
 module.hot.accept();

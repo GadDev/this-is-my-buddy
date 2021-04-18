@@ -1,9 +1,10 @@
 import React from "react";
 
-const Balance = () => {
+import Amount from "../Amount";
+const Balance = ({ amount }) => {
   return (
     <div>
-      <h2>Balance</h2>
+      <Amount amount={amount} />
     </div>
   );
 };

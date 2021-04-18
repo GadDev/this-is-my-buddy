@@ -1,26 +1,27 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html,
 body {
-	height: 100%;
-	margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 body {
-	display: grid;
-	height: 100vh;
-	margin: 0;
-	place-items: center center;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
 }
 
 button {
-	all: unset;
+  all: unset;
 }

@@ -27,6 +27,7 @@
     "react",
     "jsx-a11y",
     "simple-import-sort",
+    "import",
     "testing-library",
     "jest"
   ],
@@ -66,6 +67,10 @@
       ],
       "env": {
         "jest": true
+      },
+      "rules": {
+        "simple-import-sort/imports": "off",
+        "import/order": ["error", { "newlines-between": "always" }]
       }
     }
   ]
