@@ -4,15 +4,16 @@
     "es2021": true,
     "jest": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
     "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:testing-library/recommended",
+    "plugin:testing-library/dom",
     "plugin:testing-library/react",
+    "react-app",
     "react-app/jest"
   ],
   "parserOptions": {
@@ -22,7 +23,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y", "simple-import-sort", "testing-library"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "simple-import-sort",
+    "testing-library",
+    "jest"
+  ],
   "rules": {
     "brace-style": "error",
     "import/prefer-default-export": "off",
