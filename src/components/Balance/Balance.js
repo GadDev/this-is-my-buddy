@@ -1,12 +1,24 @@
+import PropTypes from "prop-types";
 import React from "react";
 
-import Amount from "../Amount";
-const Balance = ({ amount }) => {
+const Balance = ({ balance }) => {
+  const { amount, currency_iso } = balance;
   return (
     <div>
-      <Amount amount={amount} />
+      <h3>Balance</h3>
+      <p>
+        {amount}
+        {currency_iso}
+      </p>
     </div>
   );
+};
+
+Balance.propTypes = {
+  balance: PropTypes.shape({
+    amount: PropTypes.number,
+    currency_iso: PropTypes.string,
+  }),
 };
 
 export default Balance;

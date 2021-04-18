@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render, cleanup } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 
 import App from "../components/App";
 

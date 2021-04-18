@@ -3,9 +3,13 @@ import React from "react";
 
 import Amount from "./Amount";
 
+const amountProps = {
+  value: 10,
+  currency_iso: "EUR",
+};
 describe("Amount component", () => {
   beforeAll(() => {
-    render(<Amount />);
+    render(<Amount amount={amountProps} />);
   });
 
   test("should have the right message in the dom", () => {

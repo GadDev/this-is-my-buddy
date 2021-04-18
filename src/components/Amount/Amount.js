@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const Amount = (props) => {
-  const { value, currency_iso } = props;
+const Amount = ({ amount }) => {
+  const { value, currency_iso } = amount;
   return (
     <div>
       <p>
@@ -14,8 +14,10 @@ const Amount = (props) => {
 };
 
 Amount.propTypes = {
-  value: PropTypes.string,
-  currency_iso: PropTypes.string,
+  amount: PropTypes.shape({
+    value: PropTypes.number,
+    currency_iso: PropTypes.string,
+  }),
 };
 
 export default Amount;

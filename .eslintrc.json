@@ -13,6 +13,7 @@
     "plugin:react-hooks/recommended",
     "plugin:testing-library/dom",
     "plugin:testing-library/react",
+    "prettier",
     "react-app",
     "react-app/jest"
   ],
@@ -50,6 +51,9 @@
     "react/prop-types": ["off"],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
     "space-before-blocks": "error",
     "testing-library/await-async-query": "error",
     "testing-library/no-await-sync-query": "error",
@@ -63,7 +67,9 @@
         "**/*.test.tsx",
         "**/*.spec.js",
         "**/*.spec.jsx",
-        "**/*.spec.tsx"
+        "**/*.spec.tsx",
+        "./src/*.js",
+        "./src/*/*.js"
       ],
       "env": {
         "jest": true

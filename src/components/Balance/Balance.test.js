@@ -3,9 +3,10 @@ import React from "react";
 
 import Balance from "./Balance";
 
+const balanceProps = { amount: 10, currency_iso: "EUR" };
 describe("Balance component", () => {
   beforeAll(() => {
-    render(<Balance />);
+    render(<Balance balance={balanceProps} />);
   });
 
   test("should have the right message in the dom", () => {

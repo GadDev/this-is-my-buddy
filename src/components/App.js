@@ -1,10 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import MyImage from "../assets/image.jpeg";
 import { useFetch } from "../hooks/useFetch";
 
+import Balance from "./Balance";
+import Provider from "./Provider";
+import Transactions from "./Transactions";
+
+const initialState = {
+  id: null,
+  provider: {},
+  balance: {},
+  transactions: [],
+};
+
 const App = () => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState(initialState);
   const isComponentMounted = useRef(true);
 
   const { data, loading, error } = useFetch(
@@ -15,7 +25,7 @@ const App = () => {
   );
 
   useEffect(() => {
-    setState(data);
+    setState((prevState) => ({ ...prevState, ...data }));
   }, [data]);
 
   if (loading) {
@@ -33,10 +43,13 @@ const App = () => {
       </div>
     );
   }
-
+  console.log(state);
   return (
     <div>
       <h1>Welcome to my buddy account</h1>
+      <Provider provider={state.provider} />
+      <Balance balance={state.balance} />
+      <Transactions data={state.transactions} />
     </div>
   );
 };
