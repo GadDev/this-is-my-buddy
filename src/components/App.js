@@ -19,7 +19,7 @@ const App = () => {
   const isComponentMounted = useRef(true);
 
   const { data, loading, error } = useFetch(
-    "http://www.mocky.io/v2/5c62e7c33000004a00019b05",
+    "https://www.mocky.io/v2/5c62e7c33000004a00019b05",
     {},
     isComponentMounted,
     []
