@@ -16,4 +16,5 @@ module.exports = {
   testPathIgnorePatterns: ["/node_modules/", "/build/"],
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
+  restoreMocks: true,
 };

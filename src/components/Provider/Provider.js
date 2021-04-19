@@ -1,18 +1,20 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { Wrapper } from "../App.styled";
+
 const Provider = ({ provider }) => {
   const { title, account_number, sort_code, description } = provider;
   return (
-    <article>
-      <h2>Provider</h2>
-      <hr></hr>
-      <h3>{title}</h3>
-      <span>
-        {account_number} - {sort_code}
-      </span>
-      <p>{description}</p>
-    </article>
+    <Wrapper>
+      <h4>{title}</h4>
+      <div>
+        <p>{description}</p>
+        <span>
+          {account_number} - {sort_code}
+        </span>
+      </div>
+    </Wrapper>
   );
 };
 

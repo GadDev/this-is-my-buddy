@@ -9,9 +9,9 @@ describe("Balance component", () => {
     render(<Balance balance={balanceProps} />);
   });
 
-  test("should have the right message in the dom", () => {
-    // const title = screen.getByRole("heading");
-    // expect(title).toHaveTextContent("Balance");
+  test("should have the right title in the dom", () => {
+    const title = screen.getByRole("heading", { level: 4 });
+    expect(title).toHaveTextContent("Balance");
   });
 
   afterAll(cleanup);

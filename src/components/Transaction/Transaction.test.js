@@ -14,9 +14,9 @@ describe("Transaction component", () => {
     render(<Transaction data={transactionProps} />);
   });
 
-  test("should have the right message in the dom", () => {
-    // const title = screen.getByRole("heading");
-    // expect(title).toHaveTextContent("Transaction");
+  test("should have the right h5 in the dom", () => {
+    const title = screen.getByRole("heading", { level: 5 });
+    expect(title).toHaveTextContent("description");
   });
 
   afterAll(cleanup);

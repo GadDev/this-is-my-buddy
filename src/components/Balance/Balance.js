@@ -1,16 +1,18 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { Wrapper } from "../App.styled";
+
 const Balance = ({ balance }) => {
   const { amount, currency_iso } = balance;
   return (
-    <div>
-      <h3>Balance</h3>
+    <Wrapper>
+      <h4>Balance</h4>
       <p>
         {amount}
         {currency_iso}
       </p>
-    </div>
+    </Wrapper>
   );
 };
 

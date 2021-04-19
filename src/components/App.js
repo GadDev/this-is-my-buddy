@@ -47,7 +47,7 @@ const App = () => {
   console.log(state);
   return (
     <Layout>
-      <h1>Welcome to my buddy account</h1>
+      <h1>Welcome back buddy!</h1>
       <Provider provider={state.provider} />
       <Balance balance={state.balance} />
       <Transactions data={state.transactions} />

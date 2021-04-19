@@ -11,11 +11,11 @@ const Transactions = ({ data }) => {
 
   return (
     <section>
-      <h2>Transactions</h2>
-      <hr></hr>
-      {transactions.map((transaction) => (
-        <Transaction key={transaction.id} data={transaction} />
-      ))}
+      {transactions
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .map((transaction) => (
+          <Transaction key={transaction.id} data={transaction} />
+        ))}
     </section>
   );
 };

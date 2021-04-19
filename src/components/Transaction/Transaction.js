@@ -2,16 +2,22 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Amount from "../Amount";
+import { Wrapper } from "../App.styled";
+import { DateLabel, TransactionItem } from "./Transaction.styled";
 
 const Transaction = ({ data }) => {
   const { date, description, category_title, amount } = data;
   return (
-    <article>
-      <h2>{category_title}</h2>
-      <time>{date}</time>
-      <p>{description}</p>
-      <Amount amount={amount} />
-    </article>
+    <TransactionItem>
+      <DateLabel>{date}</DateLabel>
+      <Wrapper>
+        <div>
+          <h5>{description}</h5>
+          <p>{category_title}</p>
+        </div>
+        <Amount amount={amount} />
+      </Wrapper>
+    </TransactionItem>
   );
 };
 

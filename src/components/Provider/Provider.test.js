@@ -15,8 +15,8 @@ describe("Provider component", () => {
   });
 
   test("should have the right message in the dom", () => {
-    // const title = screen.getByRole("heading");
-    // expect(title).toHaveTextContent("Provider");
+    const title = screen.getByRole("heading", { level: 4 });
+    expect(title).toHaveTextContent("title");
   });
 
   afterAll(cleanup);
