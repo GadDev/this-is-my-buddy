@@ -12,6 +12,7 @@ const Transactions = ({ data }) => {
   return (
     <section>
       {transactions
+        .filter((item) => item.amount.value < 0)
         .sort((a, b) => b.amount.value - a.amount.value)
         .slice(0, 9)
         .map((transaction) => (
