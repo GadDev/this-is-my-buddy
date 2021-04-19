@@ -12,7 +12,8 @@ const Transactions = ({ data }) => {
   return (
     <section>
       {transactions
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .sort((a, b) => b.amount.value - a.amount.value)
+        .slice(0, 9)
         .map((transaction) => (
           <Transaction key={transaction.id} data={transaction} />
         ))}
