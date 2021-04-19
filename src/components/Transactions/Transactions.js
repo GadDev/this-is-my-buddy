@@ -14,7 +14,7 @@ const Transactions = ({ data }) => {
       {transactions
         .filter((item) => item.amount.value < 0)
         .sort((a, b) => b.amount.value - a.amount.value)
-        .slice(0, 9)
+        .slice(0, 10)
         .map((transaction) => (
           <Transaction key={transaction.id} data={transaction} />
         ))}
