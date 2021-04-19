@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "lint": "npx eslint . --fix",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.{ts,js}' --write",
+    "prepare": "husky install",
+    "start": "webpack serve",
     "test": "jest test",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
-    "start": "webpack serve",
-    "build": "webpack --mode production",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.{ts,js}' --write",
-    "prepare": "husky install"
+    "test:coverage": "jest --coverage --colors"
   },
   "keywords": [],
   "author": "",
