@@ -5,6 +5,7 @@ import { useFetch } from "../hooks/useFetch";
 import Balance from "./Balance";
 import Provider from "./Provider";
 import Transactions from "./Transactions";
+import Layout from "./Layout";
 
 const initialState = {
   id: null,
@@ -45,12 +46,12 @@ const App = () => {
   }
   console.log(state);
   return (
-    <div>
+    <Layout>
       <h1>Welcome to my buddy account</h1>
       <Provider provider={state.provider} />
       <Balance balance={state.balance} />
       <Transactions data={state.transactions} />
-    </div>
+    </Layout>
   );
 };
 
